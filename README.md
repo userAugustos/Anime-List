@@ -1,23 +1,16 @@
 # Anime list
 
-A anime list, made with reactJS, using debounce.
+A anime list, with anime details.
+
+### Features :triumph:
+
+![Badge](https://img.shields.io/badge/REACT-17.0.2-%2361DAFB?style=for-the-badge&logo=react)
+![Badge](https://img.shields.io/badge/REDUX-4.1.1-%23764ABC?style=for-the-badge&logo=redux)
+![Badge](https://img.shields.io/badge/STYLED-COMPONENTS-5.3.1-%23DB7093?style=for-the-badge&logo=styledcomponents)
+![Badge](https://img.shields.io/badge/TYPESCRIPT-4.1.2-%233178C6?style=for-the-badge&logo=typescript)
 
 
-## Available Scripts
+👤 **Felipe Augustos**
 
-In the project directory, you can run:
-
-### `yarn start`
-
-### `yarn test`
-
-### `yarn build`
-
-### `yarn eject`
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-## API
-To search animes, was used Kitsu API:
- https://kitsu.docs.apiary.io/#reference/anime/anime
-
-### You can see the results in src/img/search-loading.png and src/img/search-result.png 
+- Twitter: [@AugustosUser](https://twitter.com/AugustosUser)
+- Linkedin: [Felipe Augustos](https://www.linkedin.com/in/felipe-augustos/)
