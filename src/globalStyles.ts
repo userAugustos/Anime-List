@@ -9,7 +9,9 @@ const GlobalStyles = createGlobalStyle`
 
   body{
     font-family: Open-Sans, Helvetica, Sans-Serif;
-    color: rgba(20, 20, 20, 1);
+    color: rgba(250, 250, 250, 1);
+    background: #121212;
+
   }
 
   #root{
