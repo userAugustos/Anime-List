@@ -1,3 +1,15 @@
+export type action = {
+  data: Array<any>,
+  loading: boolean,
+  type: string
+}
+export interface initialStateProps{
+  Animes: { //nosso reducer
+    data: animeData[] //types do array de data
+    loading: boolean
+  }
+}
+
 export type animeData = {
   id: string,
   links?: any,
@@ -51,6 +63,7 @@ export type reqTypes = {
 
 export const animesTypes = {
   REQ_ANIMES: "REQ_ANIMES",
-  SET_ANIMES: "SET_ANIMES"
+  SET_ANIMES: "SET_ANIMES",
+  SET_LOADING: "SET_LOADING"
   // REQ_BY_RATING: "REQ_BY_RATING",
 }

@@ -15,3 +15,10 @@ export const SetAnimes = (data: animeData) => {
     data,
   };
 };
+
+export const SetLoading = (loading: boolean) => {
+  return {
+    type: animesTypes.SET_LOADING,
+    loading,
+  };
+};
