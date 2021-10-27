@@ -5,13 +5,16 @@ import { useDispatch, useSelector } from "react-redux";
 
 import SearchInput from "../../components/searchInput";
 import loadingLogo from "../../assets/img/loading.gif";
-import { ReqAnimes } from "../../store/modules/Animes/actions";
+import { ReqAnime, ReqAnimes } from "../../store/modules/Animes/actions";
 import { animeData, initialStateProps } from "../../utils/types";
+import { useHistory } from "react-router";
 
 import { Container, AnimesSection, SearchHeader, Loading } from "./styles";
 import { Card } from "../../components/Card";
 
 export default function Home() {
+  const history = useHistory();
+
   const dispatch = useDispatch();
   const anime = useSelector((state: initialStateProps) => state.Animes.data);
   const loading = useSelector(
@@ -27,7 +30,10 @@ export default function Home() {
     dispatch(ReqAnimes({ filter: "text", value, limit: 10 }));
   };
 
-  const handleDetailAnime = () => {
+  const handleDetailAnime = (event: React.MouseEvent) => {
+    dispatch(ReqAnime(event.currentTarget.id));
+
+    history.push(`/${event.currentTarget.id}`);
   };
 
   useEffect(() => {
@@ -46,14 +52,14 @@ export default function Home() {
           <Loading src={loadingLogo} alt='loading...' />
         ) : (
           <ul>
-            {anime &&
-              anime.map((item: animeData) => (
+            { Array.isArray(anime) &&
+            anime?.map((item: animeData) => (
                 <li key={item.id}>
                   <Card
                     image={item.attributes.posterImage?.small}
                     title={item.attributes.canonicalTitle}
-                    onClick={handleDetailAnime}
-                  />
+                    id={item.id}
+                    onClick={handleDetailAnime} />
                 </li>
               ))}
           </ul>
