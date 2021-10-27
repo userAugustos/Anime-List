@@ -7,11 +7,14 @@ import SearchInput from "../../components/searchInput";
 import loadingLogo from "../../assets/img/loading.gif";
 import { ReqAnimes } from "../../store/modules/Animes/actions";
 import { animeData, initialStateProps } from "../../utils/types";
+import { useHistory } from "react-router";
 
 import { Container, AnimesSection, SearchHeader, Loading } from "./styles";
 import { Card } from "../../components/Card";
 
 export default function Home() {
+  const history = useHistory();
+
   const dispatch = useDispatch();
   const anime = useSelector((state: initialStateProps) => state.Animes.data);
   const loading = useSelector(
@@ -28,6 +31,7 @@ export default function Home() {
   };
 
   const handleDetailAnime = () => {
+    history.push("/details")
   };
 
   useEffect(() => {

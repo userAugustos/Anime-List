@@ -15,7 +15,7 @@ export const AnimesSection = styled.section`
     flex-wrap: wrap;
 
     li{
-      margin: auto 1em;
+      margin: 1em 1em;
     }
   }
 `;
