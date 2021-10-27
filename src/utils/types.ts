@@ -3,12 +3,12 @@ import * as React from "react";
 export type action = {
   data: Array<any>;
   loading: boolean;
-  type: string;
+  type: any;
 };
 export interface initialStateProps {
   Animes: {
     //nosso reducer
-    data: animeData[]; //types do array de data
+    data: Array<animeData>; //types do array de data
     loading: boolean;
   };
 }
@@ -58,14 +58,14 @@ export type animeAttributes = {
 // export type abbreviatedTitles = Array<any>;
 
 export type reqTypes = {
-  filter?: string;
-  value?: string;
-  limit?: number;
-  type?: any;
+  filter: string;
+  value: string;
+  limit: number;
 };
 
-export const animesTypes = {
+export const actionsTypes = {
   REQ_ANIMES: "REQ_ANIMES",
+  REQ_ANIME: "REQ_ANIME", 
   SET_ANIMES: "SET_ANIMES",
   SET_LOADING: "SET_LOADING",
   // REQ_BY_RATING: "REQ_BY_RATING",
@@ -74,6 +74,7 @@ export const animesTypes = {
 export interface CardProps {
   title: string;
   image: string;
-  onClick?: () => void ;
+  onClick: (e: React.MouseEvent) => void ;
   children?: React.ReactNode;
+  id?: string;
 }

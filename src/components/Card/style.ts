@@ -30,7 +30,7 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
 
-    h4{
+    h3{
       color: #393939;
     }
   }

@@ -9,7 +9,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route path='/' exact component={Home} />
-      <Route path='/details' component={Details} />
+      <Route path='/:anime' component={Details} />
     </Switch>
   );
 }
