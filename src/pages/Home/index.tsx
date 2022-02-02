@@ -45,7 +45,7 @@ export default function Home() {
     <Container>
       <SearchHeader>
         <h3>Animes</h3>
-        <SearchInput value='' onChange={(e: any) => handleSearchAnime(e)} />
+        <SearchInput value='' onChange={handleSearchAnime} />
       </SearchHeader>
       <AnimesSection>
         {loading ? (
